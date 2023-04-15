@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart - GAMEHUB</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/1799f3b83c.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="body-bg-img"></div>
+      <nav class="navbar navbar-fixed">
+        <div id="logo-wrap">
+          <img src="/images/gamehub-white-logo.png" id="logo" alt="Gamehub Logo">
+        </div>
+        <ul class="nav-list" id="navList">
+          <a href="index.html"><li class="list-item">Home</li></a>
+          <a href="games.html"><li class="list-item">Games</li></a>
+          <a href="about.html"><li class="list-item">About</li></a>
+          <a href="contact.html"><li class="list-item">Contact</li></a>
+          <div class="mobile-search">
+            <form id="searchBar" action="#">
+                <input type="text" placeholder="Search">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+            <div class="mobile-cart-wrap">
+              <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:22px"></i>0</a>
+            </div>
+          </div>
+        </ul>
+        
+        <div class="desktop-search">
+          <form id="searchBar" action="#">
+              <input type="text" placeholder="Search">
+              <button><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <div class="cart-button-wrap">
+          <a href="cart.html" style="font-size:16px"><i class="fa fa-shopping-cart" style="font-size:26px"></i>0</a>
+        </div>
+        <div class="mobile-menu" id="toggleButton">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    <main>
+          <div class="cart-container">
+            <div class="cart-content-container">
+              <div class="heading check-heading">
+                <h3 class="check-heading-1">Shopping Cart</h3>
+                <h5 class="action">Remove All</h5>
+            </div>
+            <div class="heading-line"></div>
+              <div class="cart-items">
+                <div class="img-box">
+                  <img src="images/assets/GameHub_covers5.jpg" alt="" height="65px">
+                </div>
+                <div class="desc">
+                  <h1 class="title">Assassin</h1>
+                  <h3 class="platform">PC</h3>
+                </div>
+                <div class="counter">
+                  <i class="fa-solid fa-plus"></i>
+                  <div class="count">1</div>
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+                <div class="prices">
+                  <div class="amount">$50.00</div>
+                </div>
+                <div class="remove">
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+            <div class="cart-items">
+              <div class="img-box">
+                <img src="images/assets/GameHub_covers4.jpg" alt="" height="60px">
+              </div>
+              <div class="desc">
+                <h1 class="title">Furious</h1>
+                <h3 class="platform">PS5</h3>
+              </div>
+              <div class="counter">
+                <i class="fa-solid fa-plus"></i>
+                <div class="count">1</div>
+                <i class="fa-solid fa-minus"></i>
+              </div>
+              <div class="prices">
+                <div class="amount">$35.00</div>
+              </div>
+              <div class="remove">
+                <i class="fa-solid fa-trash"></i>
+              </div>
+            </div>
+            <div class="cart-items">
+              <div class="img-box">
+                <img src="images/assets/GameHub_covers2.jpg" alt="" height="60px">
+              </div>
+              <div class="desc">
+                <h1 class="title">Super Duper</h1>
+                <h3 class="platform">Nintendo</h3>
+              </div>
+              <div class="counter">
+                <i class="fa-solid fa-plus"></i>
+                <div class="count">1</div>
+                <i class="fa-solid fa-minus"></i>
+              </div>
+              <div class="prices">
+                <div class="amount">$19.00</div>
+              </div>
+              <div class="remove">
+                <i class="fa-solid fa-trash"></i>
+              </div>
+            </div>
+            <div class="cart-items">
+              <div class="img-box">
+                <img src="images/assets/GameHub_covers10.jpg" alt="" height="60px">
+              </div>
+              <div class="desc">
+                <h1 class="title">Forge Legend</h1>
+                <h3 class="platform">XBOX</h3>
+              </div>
+              <div class="counter">
+                <i class="fa-solid fa-plus"></i>
+                <div class="count">1</div>
+                <i class="fa-solid fa-minus"></i>
+              </div>
+              <div class="prices">
+                <div class="amount">$37.00</div>
+              </div>
+              <div class="remove">
+                <i class="fa-solid fa-trash"></i>
+              </div>
+            </div>
+            </div>
+
+            <div class="row check-row">
+              <form id="checkout-form">
+                <div class="form-row">
+                  <div class="form-col">
+                    <div class="form-group">
+                      <h3 class="col">Card Details</h3>
+                    </div>
+                  </div>
+                  <div class="payment-radio form-group">
+                    <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
+                    <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
+                    <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
+                    <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
+                  </div>
+                  <div class="form-col">
+                    <div class="form-group">
+                      <input type="text" id="cardHolder" class="form-control" placeholder="Name on card">
+                    </div>
+                  </div>
+                  <div class="form-col">
+                    <div class="form-group">
+                      <input type="text" id="cardNumber" class="form-control" placeholder="Card number">
+                    </div>
+                  </div>
+                  <div class="form-half-col">
+                    <div class="form-group">
+                      <input type="text" id="expDate" class="form-control" placeholder="Expiration date">
+                    </div>
+                  </div>
+                  <div class="form-half-col">
+                    <div class="form-group">
+                      <input type="text" id="cvv" class="form-control" placeholder="CVV">
+                    </div>
+                  </div>
+                  <div class="form-line"></div>
+                  <div class="form-col">
+                    <div class="form-group">
+                      <div class="price-info form-control"><span>Subtotal</span><span>$151.00</span></div>
+                      <div class="price-info form-control"><span>Shipping</span><span>$12.00</span></div>
+                      <div class="price-info form-control"><span>Total</span><span>$183.00</span></div>
+                    </div>
+                  </div>
+                  <div class="form-col">
+                    <div class="form-group">
+                      <div class="check-btn-container">
+                        <button class="btn pay-btn"><span>$183.00</span><span id="check-text">Checkout<i class="fa fa-arrow-right"></i></span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+
+
+
+
+      
+    </main>
+    <footer>
+      <div class="footer-content">
+        <ul class="footer-nav">
+          <li class="footer-nav-item"><a href="index.html" class="footer-link">Home</a></li>
+          <li class="footer-nav-item"><a href="games.html" class="footer-link">Games</a></li>
+          <li class="footer-nav-item"><a href="about.html" class="footer-link">About</a></li>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="" title="facebook">
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="" title="instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="" title="twitter">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="" title="youtube">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p class="cp-text">
+          © Copyright 2023 Christian Almli
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="/js/mobile-menu.js"></script>
+</html>

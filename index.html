@@ -1,19 +1,141 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My first website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - GAMEHUB</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my first website.</p>
-    <h2>Web Security</h2>
-    <p id="web-security-question">How would you advise a potential client to secure his/her website from web security attacks? Note: the word count for your answer should not be greater than 250 words</p>
-    <p id="web-security-answer">Include everyone in security practices. The best practice for building secure software is called SecDevOps. 
-        Adopt a cybersecurity framework. Automate and integrate security tools to make sure less manual work is needed, issues can be found earlier and tracked effectively. 
-        Follow secure software development practices that help you make fewer errors when writing code and helps you detect and eliminate errors earlier. 
-        Use diverse security measures. Integrate them with our entire environment and automate as much as possible. 
-        Perform security exercises, such as red team vs blue team campaigns. Red teaming is hiring an external organization that continuously tries to 
-        challenge your security and is establishing a local team that is in charge of stopping such attempts. 
-        They perform mock attacks to help you protect against real attacks. Maintain a bounty program. </p>
+    <div id="body-bg-img"></div>
+      <div id="landing-bg">
+        <nav class="navbar navbar-fixed">
+          <div id="logo-wrap">
+            <img src="/images/gamehub-white-logo.png" id="logo" alt="Gamehub Logo">
+          </div>
+          <ul class="nav-list" id="navList">
+            <a href="index.html"><li class="list-item">Home</li></a>
+            <a href="games.html"><li class="list-item">Games</li></a>
+            <a href="about.html"><li class="list-item">About</li></a>
+            <a href="contact.html"><li class="list-item">Contact</li></a>
+            <div class="mobile-search">
+              <form id="searchBar" action="#">
+                  <input type="text" placeholder="Search">
+                  <button><i class="fa fa-search"></i></button>
+              </form>
+              <div class="mobile-cart-wrap">
+                <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:22px"></i>0</a>
+              </div>
+            </div>
+          </ul>
+
+          <div class="desktop-search">
+            <form id="searchBar" action="#">
+                <input type="text" placeholder="Search">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div class="cart-button-wrap">
+            <a href="cart.html" style="font-size:16px"><i class="fa fa-shopping-cart" style="font-size:26px"></i>0</a>
+          </div>
+
+          <div class="mobile-menu" id="toggleButton">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </nav>
+        <div class="landing-content">
+          <h1 id="home-heading">GAMEHUB</h1>
+          <h5 id="home-sub">The universe of games</h5>
+          <div id="landing-btn-wrapper">
+            <a href="games.html"><button id="all-games-btn" class="btn landing-btn">ALL GAMES</button></a>
+            <a href="contact.html"><button id="sell-btn" class="btn landing-btn">SELL GAMES</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <main>
+          <div class="games-container">
+            <div class="heading">
+              <h3 class="featured-heading">NEW GAMES</h3>
+              <button class="heading-btn btn">Discover More</button>
+            </div>
+            <div class="heading-line"></div>
+            <div class="games-grid">
+              <div class="game-item">
+                <img src="/images/assets/GameHub_covers9.jpg" alt="Cyberpunk" class="game-img">
+                <div class="game-spec">
+                  <h5 class="game-title">Cyberpunk</h5>
+                  <h5 class="game-price">$50.00</h5>
+                  <a href="game-specific.html"><button class="game-btn btn">Details</button></a>
+                </div>
+              </div>
+              <div class="game-item">
+                <img src="/images/assets/GameHub_covers6.jpg" alt="Space War" class="game-img">
+                <div class="game-spec">
+                  <h5 class="game-title">Space War</h5>
+                  <h5 class="game-price">$45.00</h5>
+                  <a href="game-specific.html"><button class="game-btn btn">Details</button></a>
+                </div>
+              </div>
+              <div class="game-item">
+                <img src="/images/assets/GameHub_covers.jpg" alt="Ping Pong" class="game-img">
+                <div class="game-spec">
+                  <h5 class="game-title">Ping Pong</h5>
+                  <h5 class="game-price">$30.00</h5>
+                  <a href="game-specific.html"><button class="game-btn btn">Details</button></a>
+                </div>
+              </div>
+              <div class="game-item">
+                <img src="/images/assets/GameHub_covers4.jpg" alt="Furiou" class="game-img">
+                <div class="game-spec">
+                  <h5 class="game-title">Furious</h5>
+                  <h5 class="game-price">$37.00</h5>
+                  <a href="game-specific.html"><button class="game-btn btn">Details</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-box">
+            <h2 class="heading-2">SELL YOUR GAMES</h2>
+            <p> Finished your game? You can sell your used games here at GameHub.</p>
+              <p>Get in touch by clicking the button below.</p>
+              <a href="contact.html"><button class="gen-btn btn">Get in touch</button></a>
+          </div>
+        </main>
+      </div>
+    
+
+    <footer>
+      <div class="footer-content">
+        <ul class="footer-nav">
+          <li class="footer-nav-item"><a href="index.html" class="footer-link">Home</a></li>
+          <li class="footer-nav-item"><a href="games.html" class="footer-link">Games</a></li>
+          <li class="footer-nav-item"><a href="about.html" class="footer-link">About</a></li>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="" title="facebook">
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="" title="instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="" title="twitter">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="" title="youtube">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p class="cp-text">
+          © Copyright 2023 Christian Almli
+        </p>
+      </div>
+    </footer>
   </body>
+  <script src="/js/mobile-menu.js"></script>
 </html>

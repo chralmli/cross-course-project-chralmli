@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact - GAMEHUB</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="body-bg-img"></div>
+      <nav class="navbar navbar-fixed">
+        <div id="logo-wrap">
+          <img src="/images/gamehub-white-logo.png" id="logo" alt="Gamehub Logo">
+        </div>
+        <ul class="nav-list" id="navList">
+          <a href="index.html"><li class="list-item">Home</li></a>
+          <a href="games.html"><li class="list-item">Games</li></a>
+          <a href="about.html"><li class="list-item">About</li></a>
+          <a href="contact.html"><li class="list-item">Contact</li></a>
+          <div class="mobile-search">
+            <form id="searchBar" action="#">
+                <input type="text" placeholder="Search">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+            <div class="mobile-cart-wrap">
+              <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:22px"></i>0</a>
+            </div>
+          </div>
+        </ul>
+        
+        <div class="desktop-search">
+          <form id="searchBar" action="#">
+              <input type="text" placeholder="Search">
+              <button><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <div class="cart-button-wrap">
+          <a href="cart.html" style="font-size:16px"><i class="fa fa-shopping-cart" style="font-size:26px"></i>0</a>
+        </div>
+        <div class="mobile-menu" id="toggleButton">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    <main>
+      <div class="container">
+        <div class="heading-container contact-heading">
+          <h1 class="contact-h1">GET IN TOUCH</h1>
+        </div>
+        
+        <div class="contact-icons-flex">
+          <div class="flex-group">
+            <img src="/images/violet-contact-icon-1.png" alt="" class="contact-icon">
+            <h4 class="contact-info-heading">ADDRESS</h4>
+            <span class="contact-info">Game Street 1337, Gametown</span>
+          </div>
+          <div class="flex-group">
+            <img src="/images/violet-contact-icon-2.png" alt="" class="contact-icon">
+            <h4 class="contact-info-heading">PHONE</h4>
+            <span class="contact-info">(727) 451-7800</span>
+          </div>
+          <div class="flex-group">
+            <img src="/images/violet-contact-icon-3.png" alt="" class="contact-icon">
+            <h4 class="contact-info-heading">EMAIL</h4>
+            <span class="contact-info">info@gamehub.com</span>
+          </div>
+        </div>
+        <div class="contact-heading">
+          <h2 class="contact-h2">Message Us</h2>
+        </div>
+        <div class="row">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-half-col">
+                <div class="form-group">
+                  <input type="text" id="name" class="form-control" placeholder="Name">
+                </div>
+              </div>
+              <div class="form-half-col">
+                <div class="form-group">
+                  <input type="text" id="email" class="form-control" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-col">
+                <div class="form-group">
+                  <input type="text" id="subject" class="form-control" placeholder="Subject">
+                </div>
+              </div>
+              <div class="form-col">
+                <div class="form-group">
+                  <textarea type="text" id="message" class="form-control" placeholder="Message" cols="30" rows="7"></textarea>
+                </div>
+              </div>
+              <div class="form-col">
+                <div class="form-group">
+                  <input type="submit" class="btn" id="contact-btn" value="Send Message">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+    </main>
+    <footer>
+      <div class="footer-content">
+        <ul class="footer-nav">
+          <li class="footer-nav-item"><a href="index.html" class="footer-link">Home</a></li>
+          <li class="footer-nav-item"><a href="games.html" class="footer-link">Games</a></li>
+          <li class="footer-nav-item"><a href="about.html" class="footer-link">About</a></li>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="" title="facebook">
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="" title="instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="" title="twitter">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="" title="youtube">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p class="cp-text">
+          © Copyright 2023 Christian Almli
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="/js/mobile-menu.js"></script>
+</html>
