@@ -438,6 +438,11 @@ p {
 .count {
     font-size: 16px;
 }
+
+.fa-solid {
+    cursor: pointer;
+}
+
 .fa-plus, 
 .fa-minus {
     margin: 0;

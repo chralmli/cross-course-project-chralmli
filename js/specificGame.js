@@ -9,6 +9,22 @@ const apiEndpoint = `https://api.noroff.dev/api/v1/gamehub/${gameId}`;
 const loadingIndicator = document.getElementById("loading-indicator");
 loadingIndicator.style.display = "block";
 
+    // Add to cart
+    function addToCart(game) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        console.log("addToCart has been triggered");
+        let existingItem = cart.find(item => item.id === game.id);
+
+        if (existingItem) {
+            existingItem.count++;
+        } else {
+            game.count = 1;
+            cart.push(game);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
 // Fetch the specific game details
 async function getGameDetails () {
     try {
@@ -29,7 +45,7 @@ async function getGameDetails () {
                 <span class="price">$${game.price}</span>
             </div>
             <div class="buy-btn-wrap">
-                <a href="cart.html"><button class="buy-btn btn">Buy Now</button></a>
+                <button id="addToCartBtn" class="buy-btn btn">Add to Cart</button>
             </div>
             <div class="game-desc">
             <p class="game-description">${game.description}</p>
@@ -39,6 +55,11 @@ async function getGameDetails () {
         // Add the HTML to the container
         const gameContainer = document.querySelector(".game-container");
         gameContainer.innerHTML += gameDetails;
+
+        document.getElementById("addToCartBtn").addEventListener("click", function() {
+            addToCart(game);
+        })
+
 
     } catch (error) {
         console.error("Fetch error:", error);

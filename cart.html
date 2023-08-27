@@ -24,7 +24,7 @@
                 <button><i class="fa fa-search"></i></button>
             </form>
             <div class="mobile-cart-wrap">
-              <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:22px"></i>0</a>
+              <a href="cart.html" class="cart-counter"><i class="fa fa-shopping-cart" style="font-size:22px"></i>0</a>
             </div>
           </div>
         </ul>
@@ -45,14 +45,14 @@
         </div>
       </nav>
     <main>
-          <div class="cart-container">
-            <div class="cart-content-container">
-              <div class="heading check-heading">
-                <h3 class="check-heading-1">Shopping Cart</h3>
-                <h5 class="action">Remove All</h5>
-            </div>
-            <div class="heading-line"></div>
-              <div class="cart-items">
+      <div class="cart-container">
+        <div class="cart-content-container">
+          <div class="heading check-heading">
+            <h3 class="check-heading-1">Shopping Cart</h3>
+            <h5 class="action">Remove All</h5>
+          </div>
+          <div class="heading-line"></div>
+              <!-- <div class="cart-items">
                 <div class="img-box">
                   <img src="images/assets/GameHub_covers5.jpg" alt="" height="65px">
                 </div>
@@ -131,62 +131,62 @@
               <div class="remove">
                 <i class="fa-solid fa-trash"></i>
               </div>
-            </div>
-            </div>
+            </div> -->
+          </div>
 
-            <div class="row check-row">
-              <form id="checkout-form">
-                <div class="form-row">
-                  <div class="form-col">
-                    <div class="form-group">
-                      <h3 class="col">Card Details</h3>
-                    </div>
+          <div class="row check-row">
+            <form id="checkout-form">
+              <div class="form-row">
+                <div class="form-col">
+                  <div class="form-group">
+                    <h3 class="col">Card Details</h3>
                   </div>
-                  <div class="payment-radio form-group">
-                    <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
-                    <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
-                    <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
-                    <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
+                </div>
+                <div class="payment-radio form-group">
+                  <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
+                  <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
+                  <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
+                  <label class="radio"><input type="radio" name="card"><span><img width="35" src="https://img.icons8.com/officel/48/000000/visa.png"></span></label>
+                </div>
+                <div class="form-col">
+                  <div class="form-group">
+                    <input type="text" id="cardHolder" class="form-control" placeholder="Name on card">
                   </div>
-                  <div class="form-col">
-                    <div class="form-group">
-                      <input type="text" id="cardHolder" class="form-control" placeholder="Name on card">
-                    </div>
+                </div>
+                <div class="form-col">
+                  <div class="form-group">
+                    <input type="text" id="cardNumber" class="form-control" placeholder="Card number">
                   </div>
-                  <div class="form-col">
-                    <div class="form-group">
-                      <input type="text" id="cardNumber" class="form-control" placeholder="Card number">
-                    </div>
+                </div>
+                <div class="form-half-col">
+                  <div class="form-group">
+                    <input type="text" id="expDate" class="form-control" placeholder="Expiration date">
                   </div>
-                  <div class="form-half-col">
-                    <div class="form-group">
-                      <input type="text" id="expDate" class="form-control" placeholder="Expiration date">
-                    </div>
+                </div>
+                <div class="form-half-col">
+                  <div class="form-group">
+                    <input type="text" id="cvv" class="form-control" placeholder="CVV">
                   </div>
-                  <div class="form-half-col">
-                    <div class="form-group">
-                      <input type="text" id="cvv" class="form-control" placeholder="CVV">
-                    </div>
+                </div>
+                <div class="form-line"></div>
+                <div class="form-col">
+                  <div class="form-group">
+                    <div class="price-info form-control"><span>Subtotal</span><span>$151.00</span></div>
+                    <div class="price-info form-control"><span>Shipping</span><span>$12.00</span></div>
+                    <div class="price-info form-control"><span>Total</span><span>$183.00</span></div>
                   </div>
-                  <div class="form-line"></div>
-                  <div class="form-col">
-                    <div class="form-group">
-                      <div class="price-info form-control"><span>Subtotal</span><span>$151.00</span></div>
-                      <div class="price-info form-control"><span>Shipping</span><span>$12.00</span></div>
-                      <div class="price-info form-control"><span>Total</span><span>$183.00</span></div>
-                    </div>
-                  </div>
-                  <div class="form-col">
-                    <div class="form-group">
-                      <div class="check-btn-container">
-                        <button class="btn pay-btn"><span>$183.00</span><span id="check-text">Checkout<i class="fa fa-arrow-right"></i></span></button>
-                      </div>
+                </div>
+                <div class="form-col">
+                  <div class="form-group">
+                    <div class="check-btn-container">
+                      <button class="btn pay-btn"><span>$183.00</span><span id="check-text">Checkout<i class="fa fa-arrow-right"></i></span></button>
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
+        </div>
 
 
 
@@ -222,6 +222,8 @@
         </p>
       </div>
     </footer>
+    <script src="/js/mobile-menu.js"></script>
+    <script src="/js/shoppingCart.js" defer></script>
   </body>
-  <script src="/js/mobile-menu.js"></script>
+  <!-- <script src="/js/gamesList.js"></script> -->
 </html>
