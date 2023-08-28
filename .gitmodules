@@ -1,0 +1,3 @@
+[submodule "path_to_submodule"] 
+  path = D:/noroff_dev/cross-course-project-chralmli
+  url = git:https://github.com/chralmli/cross-course-project-chralmli/tree/maingit 

@@ -2,37 +2,54 @@ console.log("file loaded");
 document.addEventListener("DOMContentLoaded", function() {
     const cartContainer = document.querySelector(".cart-container .cart-content-container");
     const checkoutForm = document.getElementById("checkout-form");
-
+    const cartCountElement = document.querySelector(".cart-button-wrap a");
     let cart = [];
 
-    // remove item from cart
-    function removeItem(id) {
-        cart = cart.filter(item => item.id !== id);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        renderCartItems();
+    // Saving the cart quantity in local storage
+    localStorage.setItem("cartCount", cart.length);
+
+    // Update cart counter 
+    function updateCartCount() {
+        const cartCount = localStorage.getItem("cartCount") || "0";
+        const cartButton = document.getElementById("cart-button");
+        cartButton.innerHTML = `<i class="fa fa-shopping-cart" style="font-size:26px">${cartCount}</i>`;
+        const totalItems = cart.reduce((acc, item) => acc + item.count, 0);
+        cartCountElement.innerHTML  = `<i class="fa fa-shopping-cart" style="font-size:26px"></i>${totalItems}`;
     }
 
-    // increment the cart item quantity
-    function incrementItem(id) {
+    document.addEventListener("DOMContentLoaded", function() {
+        updateCartCount();
+    });
+
+    function updatePrices() {
+        const subtotal = cart.reduce((acc, item) => acc + item.price * item.count, 0);
+        const shipping = 9.99;
+        const total = subtotal + shipping;
+
+        document.querySelector(".price-info:nth-child(1) span:last-child").innerText = `$${subtotal.toFixed(2)}`;
+        document.querySelector(".price-info:nth-child(2) span:last-child").innerText = `$${shipping.toFixed(2)}`;
+        document.querySelector(".price-info:nth-child(3) span:last-child").innerText = `$${total.toFixed(2)}`;
+        document.querySelector(".check-btn-container .pay-btn span:first-child").innerText = `$${total.toFixed(2)}`;
+    }
+
+    function modifyCart(id, action) {
         const item = cart.find(item => item.id === id);
         if (item) {
-            item.count++;
+            if (action === "increment") {
+                item.count++;
+            } else if (action === "decrement") {
+                item.count--;
+                if (item.count === 0) {
+                    cart = cart.filter(item => item.id !== id);
+                }
+            } else if (action === "remove") {
+                cart = cart.filter(item => item.id !== id);
+            }
             localStorage.setItem("cart", JSON.stringify(cart));
             renderCartItems();
-        }
-    }
-
-    function decrementItem(id) {
-        const item = cart.find(item => item.id === id);
-        if (item) {
-            item.count--;
-            if (item.count === 0) {
-                removeItem(id);
-            } else {
-                localStorage.setItem("cart", JSON.stringify(cart));
-                renderCartItems();
-            }
-        }
+            updatePrices();
+            updateCartCount();
+        } 
     }
 
     // Render cart items
@@ -41,15 +58,12 @@ document.addEventListener("DOMContentLoaded", function() {
         // Retrieve cart items from local storage
         cart = JSON.parse(localStorage.getItem("cart") || "[]");
         let cartHTML = "";
-
         cart.forEach(item => {
             const cartItemHTML = createCartItemHTML(item);
             cartHTML += cartItemHTML;
         });
-
         cartContainer.innerHTML = cartHTML;
-
-        updateSubtotal();
+        updateCartCount();
     }
 
     function createCartItemHTML(item) {
@@ -79,30 +93,25 @@ document.addEventListener("DOMContentLoaded", function() {
         return cartItemHTML;
     }
 
-    function updateSubtotal() {
-        const subtotal = cart.reduce((acc, item) => acc + item.price * item.count, 0);
-        document.querySelector(".price-info").innerText = `$${subtotal}`;
-    }
+
 
     renderCartItems();
+    updatePrices();
 
     // Add event listeners to dynamically created elements
     cartContainer.addEventListener("click", function(e) {
+        const itemId = e.target.getAttribute("data-item-id");
         if (e.target.classList.contains("fa-trash")) {
-            const itemId = e.target.getAttribute("data-item-id");
-            removeItem(itemId);
+            modifyCart(itemId, "remove");
         } else if (e.target.classList.contains("fa-plus")) {
-            const itemId = e.target.getAttribute("data-item-id");
-            incrementItem(itemId);
+            modifyCart(itemId, "increment");
         } else if (e.target.classList.contains("fa-minus")) {
-            const itemId = e.target.getAttribute("data-item-id");
-            decrementItem(itemId);
+            modifyCart(itemId, "decrement");
         }
     });
 
     checkoutForm.addEventListener("submit", function(e) {
         e.preventDefault();
-
         console.log("Checkout successful!");
     });
 });
